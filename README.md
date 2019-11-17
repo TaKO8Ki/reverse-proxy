@@ -2,7 +2,7 @@
 
 This proxy is based on [Traefik](https://github.com/containous/traefik).
 
-## What is Traefik?
+## 📡 What is Traefik?
 
 > Traefik is a modern HTTP reverse proxy and load balancer made to deploy microservices with ease.
 
