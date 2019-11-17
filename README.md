@@ -1,4 +1,4 @@
-# reverse-proxy
+# ⚓ reverse-proxy
 
 This proxy is based on [Traefik](https://github.com/containous/traefik).
 
@@ -8,7 +8,7 @@ This proxy is based on [Traefik](https://github.com/containous/traefik).
 
 <img src="https://user-images.githubusercontent.com/41065217/69004196-7ef25380-0952-11ea-84f6-e70c42c51dfe.png" width="300">
 
-## Usage
+## 🚀 Usage
 
 ```sh
 $ docker network create --driver=overlay --attachable proxy
