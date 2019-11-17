@@ -1,6 +1,10 @@
 # reverse-proxy
 
-> Traefɪk is a modern HTTP reverse proxy and load balancer made to deploy microservices with ease.
+This proxy is based on [Traefik](https://github.com/containous/traefik).
+
+## What is Traefik?
+
+> Traefik is a modern HTTP reverse proxy and load balancer made to deploy microservices with ease.
 
 ## Usage
 
