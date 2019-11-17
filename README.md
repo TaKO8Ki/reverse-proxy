@@ -4,9 +4,9 @@ This proxy is based on [Traefik](https://github.com/containous/traefik).
 
 ## What is Traefik?
 
-![traefik](https://user-images.githubusercontent.com/41065217/69004196-7ef25380-0952-11ea-84f6-e70c42c51dfe.png)
-
 > Traefik is a modern HTTP reverse proxy and load balancer made to deploy microservices with ease.
+
+<img src="https://user-images.githubusercontent.com/41065217/69004196-7ef25380-0952-11ea-84f6-e70c42c51dfe.png" width="300">
 
 ## Usage
 
