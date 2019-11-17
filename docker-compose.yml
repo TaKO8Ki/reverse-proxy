@@ -1,0 +1,23 @@
+version: "3.3"
+
+services:
+  traefik:
+    image: traefik:1.4
+    ports:
+      - 80:80
+      - 8080:8080
+    networks:
+      - shared
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    configs:
+      - source: traefik-config
+        target: /etc/traefik/traefik.toml
+
+networks:
+  shared:
+    external: true
+
+configs:
+  traefik-config:
+    file: config.toml
