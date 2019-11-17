@@ -7,7 +7,7 @@ services:
       - 80:80
       - 8080:8080
     networks:
-      - shared
+      - proxy
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     configs:
@@ -15,7 +15,7 @@ services:
         target: /etc/traefik/traefik.toml
 
 networks:
-  shared:
+  proxy:
     external: true
 
 configs:
