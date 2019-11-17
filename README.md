@@ -1,4 +1,4 @@
-# ⚓ reverse-proxy
+# reverse-proxy
 
 This proxy is based on [Traefik](https://github.com/containous/traefik).
 
