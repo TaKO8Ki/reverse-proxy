@@ -12,6 +12,8 @@ This proxy is based on [Traefik](https://github.com/containous/traefik).
 
 ```sh
 $ docker network create --driver=overlay --attachable proxy
+
+$ docker stack deploy --compose-file docker-compose.yml [stack name]
 ```
 
 Then, what you have to do is build containers in this network and set options.
