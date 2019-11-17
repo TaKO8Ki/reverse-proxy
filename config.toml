@@ -1,5 +1,7 @@
-logLevel="DEBUG"
-debug=true
+debug = false
+
+logLevel = "ERROR"
+defaultEntryPoints = ["https","http"]
 
 [web]
 address=":8080"

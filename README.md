@@ -16,6 +16,25 @@ $ docker network create --driver=overlay --attachable proxy
 $ docker stack deploy --compose-file docker-compose.yml [stack name]
 ```
 
+e.g.
+your service docker-compose.yml
+
+```yml
+services:
+  web:
+    deploy:
+      labels:
+        - "traefik.frontend.rule=Host:wooooo.cf"
+        - "traefik.port=8004"
+        - "traefik.backend=puppeteer"
+        - "traefik.docker.network=shared"
+        - "traefik.enable=true"
+        - "traefik.frontend.entryPoints=http,https"
+        - "traefik.redirectorservice.frontend.entryPoints=http"
+        - "traefik.redirectorservice.frontend.redirect.entryPoint=https"
+        - "traefik.webservice.frontend.entryPoints=https"
+```
+
 Then, what you have to do is build containers in this network and set options.
 
 If you need more information, please click the link below. 
