@@ -24,15 +24,15 @@ services:
   web:
     deploy:
       labels:
-        - "traefik.frontend.rule=Host:wooooo.cf"
-        - "traefik.port=8004"
-        - "traefik.backend=puppeteer"
-        - "traefik.docker.network=shared"
-        - "traefik.enable=true"
-        - "traefik.frontend.entryPoints=http,https"
-        - "traefik.redirectorservice.frontend.entryPoints=http"
-        - "traefik.redirectorservice.frontend.redirect.entryPoint=https"
-        - "traefik.webservice.frontend.entryPoints=https"
+        - traefik.frontend.rule=Host:www.${DOMAIN?Variable DOMAIN not set}
+        - traefik.port=${PORT}
+        - traefik.backend=puppeteer
+        - traefik.docker.network=traefik-public
+        - traefik.tags=traefik-public
+        - traefik.enable=true
+        - traefik.redirectorservice.frontend.entryPoints=http
+        - traefik.redirectorservice.frontend.redirect.entryPoint=https
+        - traefik.webservice.frontend.entryPoints=https
 ```
 
 Then, what you have to do is build containers in this network and set options.
