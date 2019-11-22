@@ -13,6 +13,7 @@ services:
       - default
       - traefik-public
     deploy:
+      replicas: ${CONSUL_REPLICAS}
       labels:
         - traefik.frontend.rule=Host:consul.${DOMAIN?Variable DOMAIN not set}
         - traefik.enable=true
@@ -44,6 +45,7 @@ services:
       - 80:80
       - 443:443
     deploy:
+      replicas: ${TRAEFIK_REPLICAS}
       placement:
         constraints:
           - node.role == manager
