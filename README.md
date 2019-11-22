@@ -28,7 +28,7 @@ services:
         - traefik.port=${PORT}
         - traefik.backend=puppeteer
         - traefik.docker.network=traefik-public
-        - traefik.tags=traefik-public
+        - traefik.tags=traefik-public # the same tag with traefik
         - traefik.enable=true
         - traefik.redirectorservice.frontend.entryPoints=http
         - traefik.redirectorservice.frontend.redirect.entryPoint=https
